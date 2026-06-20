@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Very dark warm background (deep brownish-black) */
+  --background: #110d0c;
+  --foreground: #fcfcfc;
 }
 
 @theme inline {
@@ -10,17 +11,16 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* African Gold / Vibrant Yellow */
+  --color-primary: #F2A900;
+  --color-primary-hover: #d69500;
+  /* Secondary accent color (Terracotta/Warm red) */
+  --color-accent: #D95D39;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
